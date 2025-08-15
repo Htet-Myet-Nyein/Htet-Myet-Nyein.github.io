@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Htet Myet Nyein</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+          <header class="site-header">
+            <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+
+            <h2 class="site-title">
+              <a href="My website.html">Htet Myet Nyein</a>
+            </h2>
+          </header>
+
+          <nav class="sidebar" id="sidebar">
+           <ul>
+            <li><a href="About me.html">About Me</a></li>
+            <li><a href="Achievements.html">Achievements</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="My website.html">Home</a></li>
+           </ul>
+          </nav>
+
+        <main class="content-wrapper about">
+              <p>This is the Achievements content. Here is my Achievements...</p>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2025 Htet Myet Nyein. All rights reserved.</p>
+            <p>Contact: <a href="mailto:htet@example.com">hmngojo@gmail.com</a></p>
+        </footer>
+      </div>
+        
+        <script>
+           function toggleSidebar() {
+           const sidebar = document.getElementById("sidebar");
+           sidebar.classList.toggle("active");
+          }
+
+        // Optional: close sidebar on outside click
+        window.addEventListener('click', function(e) {
+           const sidebar = document.getElementById('sidebar');
+           const hamburger = document.querySelector('.hamburger');
+    
+           if (
+             sidebar.classList.contains('active') &&
+             !sidebar.contains(e.target) &&
+             !hamburger.contains(e.target)
+           ) {
+             sidebar.classList.remove('active');
+           }
+         });
+        </script>
+    </body>
+</html>

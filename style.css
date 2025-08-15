@@ -1,0 +1,194 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: #afdde5;
+}
+h2{                       
+    padding: 18px;                 /* Space inside the header */
+    text-align: center;            /* Centered text */
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    box-shadow: none;
+}
+a {
+      color: #003135;         
+      text-decoration: none;  
+      font-weight: bold;      
+    }
+
+a:hover {
+    color: white;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Fill full screen height */
+}
+
+.box-section {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #0fa4af;
+  color: white;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .box-section {
+    padding-top: 40px;
+    flex-direction: column;
+  }
+
+  .box {
+    margin-bottom: 20px;
+    line-height: 120px;
+  }
+}
+
+.site-footer {
+  background-color: #0fa4af;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+  margin-top: 40px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #003135;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/*Here is for the about me page*/
+
+.content-wrapper.about {
+  align-items: flex-start; /* Aligns content to top instead of center */
+  padding: 20px;
+}
+
+/*Here is for the achievements page*/
+
+.content-wrapper.achievements {
+  align-items: flex-start; /* Aligns content to top instead of center */
+  padding: 20px;
+}
+
+/*Here is for the projects page*/
+
+.content-wrapper.projects {
+  align-items: flex-start; /* Aligns content to top instead of center */
+  padding: 20px;
+}
+
+/* Sidebar styling */
+/* Header */
+.site-header {
+  background-color: #0fa4af;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the title */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* This adds the shadow under the whole header */
+  z-index: 100; /* make sure it's above other content */
+}
+
+/* Title centered */
+.site-title {
+  margin: 0;
+  font-size: 20px;
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+}
+
+.site-title a {
+  text-decoration: none;
+  padding: none;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Hamburger on left */
+.hamburger {
+  position: absolute;
+  left: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+/* Sidebar menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: #0fa4af;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 999;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: Tahoma, sans-serif;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: #024950;
+}
+
+/* Show sidebar when active */
+.sidebar.active {
+  left: 0;
+}
