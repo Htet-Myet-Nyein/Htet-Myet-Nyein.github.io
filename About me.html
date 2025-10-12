@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Htet Myet Nyein</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         
@@ -31,13 +32,47 @@
                   <h3 class = "about-me-heading-1">
                     About me
                   </h3>
-                  <p class = "about-me-paragraph-1">
-                   My name is Htet Myet Nyein. You have probably noticed it since it is the name of the website. I was born in Yangon, Myanmar. I am 21 years old and currently living in NayPyiTaw, the capital of Myanmar. Both my prarents were government workers until my father retired 7 years ago. Due to them being government workers, I had to move along with them to several cities across Myanmar. In 2021, when Myanmar was in complete chaos, I was in Loikaw, Kayah. I lived there for two years, surrounded by heavy artileries and constant bombing. I even had to evacuate the city in 2023. But this makes me realize how fragile life can be and encouraged me to chase my dreams regardless of the situation. 
-                  </p>
                   <img src="my-photo.png" alt="A photo of a man sitting" style="display:block; margin:auto; width: 300px;">
                   <p class = "about-me-paragraph-1">
-                   In 2025, I am in NayPyiTaw, after moving to three different cities, from Loikaw to Mandalay, from Mandalay to Yangon and from Yangon to NayPyiTaw. In March 28, I was once again showned how lives can be taken within minutes. A devastating earthquake destroyed my house. I was inside the house and saw how violent nature can be at times. But my determination to chase my dreams became more solid. 
+                   Name    :   Htet Myet Nyein<br>
+                   D.O.B    :    26.5.2004<br>
+                   Gender   :    Male<br>
                   </p>
+
+                  <div id="Current" class="text-box">
+                    <h4>(1) Current</h4>
+                    <p>
+                      I’m currently living in a suburban area of Nay Pyi Taw with my parents and a few of my mom’s coworkers. My mother works for the Ministry of Social Welfare, Relief, and Resettlement. Until recently, we lived in a government-provided apartment. However, on March 28, a 7.7 magnitude earthquake struck and severely damaged the building. After staying in a temporary camp for several months, we relocated here in July. 
+                    </p>
+                    <div id="more-text" class="hidden-text">
+                      <p>
+                        These days, I spend most of my time learning computer programming, mathematics, and physics as I prepare to apply for a scholarship in Engineering—specifically in Mechanical or Mechatronics Engineering. Since I don’t want to place a financial burden on my mom by enrolling in paid courses, I’ve been using free platforms like Khan Academy and freeCodeCamp. I am also working on small solo projects to sharpen my skills in coding, math, and physics, and to explore ideas in philosophy that interest me.
+                      </p>
+                      <p>
+                        To give you a small break from reading, here’s a photo of a small farm I’ve been helping out with recently—it’s one of the things that keeps me grounded and helps me stay active.
+                      </p>
+                      <img src="farm.jpg" alt="A photo of a farm">
+                    </div>
+                    <button class="readMoreBtn">Read More</button>
+                  </div>
+                    <div id="Childhood" class="text-box">
+                      <h4>(2) Educational Background</h4>
+                      <p>
+                        I graduated from high school in 2020 with three distinctions — in Math, Chemistry, and Biology — a year before the political chaos in my country. Due to that unrest, I couldn’t attend any university and became trapped in a city surrounded by armed conflict. I decided to use my time there effectively and began my programming journey through freeCodeCamp’s Responsive Web Design courses.
+                      <div id="more-text" class="hidden-text">
+                        <p>
+                          After relocating to another city, I realized that scholarships were my only path to pursue my dream of becoming an inventor. So, I started preparing for the IELTS and achieved a band score of 8.
+                        </p>
+                        <p>
+                          I then began applying for scholarships, but I wasn’t selected. Determined to demonstrate my potential, I decided to showcase my skills through various projects and shifted my focus to Python, Math, and Physics. freeCodeCamp became like a classroom for my Python journey, where I completed multiple courses.
+                        </p>
+                        <p>
+                          I am also interested in philosophy and have written a few pieces, which I uploaded on this website’s Projects page.
+                        </p>
+                      </div>
+                      <button class="readMoreBtn">Read More</button>
+                    </div>  
+                   </div>
                 </div>
                   
               </p>
@@ -68,7 +103,23 @@
              sidebar.classList.remove('active');
            }
          });
+
+         document.querySelectorAll(".readMoreBtn").forEach(function(btn) {
+          btn.addEventListener("click", function() {
+            let box = btn.closest(".text-box");        
+            let moreText = box.querySelector(".hidden-text");
+
+            if (moreText.classList.contains("show")) {
+              moreText.classList.remove("show");
+              btn.innerText = "Read More";
+            } else {
+              moreText.classList.add("show");
+              btn.innerText = "Read Less";
+            }
+          });
+        });
         </script>
     </body>
 </html>
+
 
