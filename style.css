@@ -101,6 +101,7 @@ h3 {
 .content-wrapper.about {
   align-items: flex-start; /* Aligns content to top instead of center */
   padding: 20px;
+  justify-items: center;
 }
 
 .about-me-box {
@@ -460,5 +461,6 @@ h4 {
   justify-items: center;
   margin-top: 20px;
 }
+
 
 
