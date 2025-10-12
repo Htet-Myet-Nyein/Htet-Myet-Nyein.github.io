@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Htet Myet Nyein</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+          <header class="site-header">
+            <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+
+            <h2 class="site-title">
+              <a href="index.html">Htet Myet Nyein</a>
+            </h2>
+          </header>
+
+          <nav class="sidebar" id="sidebar">
+           <ul>
+            <li><a href="About me.html">About Me</a></li>
+            <li><a href="Achievements.html">Achievements</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="index.html">Home</a></li>
+           </ul>
+          </nav>
+          <div class="pprojects">
+            <div class="python-project-box">
+                <h2 class="article-lists-heading">Python Projects</h2>
+                <p>Since Python does not run smoothly on browers, I will just use google colab links. After you clicked the link, you have to click the play button beside the codes.</p>
+                <p>Three Math Games</p>
+                <p><ol>
+                  <li>Scatter Plot Game</li>
+                  <p>In this game, you have to guess the coordinates of the red dot.</p>
+                  <li>Algebra Practice Game</li>
+                  <p>This game might be beneficial for students who first started to learn algebra. You just have to type in the answer.</p>
+                  <li>Projectile Game</li>
+                  <p>You have to move the sliders undet the code after you entered the vaules for a, b, and c. Then you go back to the tope section of the code, and you will see the graph where you have to play the sliders to get over a red wall.</p>
+                </ol></p>
+                <p>Here is the <a href="https://colab.research.google.com/drive/1QGsz1wWzC0JJR0PErEBhXReBlg-n78dD?usp=sharing">Google Colab link.</a></p>
+          </div>
+            </div>
+        <footer class="site-footer">
+            <p>© 2025 Htet Myet Nyein. All rights reserved.</p>
+            <p>Contact: <a href="mailto:hmngojo@gmail.com">hmngojo@gmail.com</a></p>
+        </footer>
+      </div>
+        
+        <script>
+           function toggleSidebar() {
+             const sidebar = document.getElementById("sidebar");
+             sidebar.classList.toggle("active");
+           }
+
+           // Optional: close sidebar on outside click
+           window.addEventListener('click', function(e) {
+             const sidebar = document.getElementById('sidebar');
+             const hamburger = document.querySelector('.hamburger');
+    
+             if (
+               sidebar.classList.contains('active') &&
+               !sidebar.contains(e.target) &&
+               !hamburger.contains(e.target)
+             ) {
+               sidebar.classList.remove('active');
+             }
+           });
+        </script>
+    </body>
+</html>
