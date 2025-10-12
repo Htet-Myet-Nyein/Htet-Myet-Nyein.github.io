@@ -4,8 +4,21 @@
         <meta charset="UTF-8">
         <title>Htet Myet Nyein</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+          // Simple security code check
+          function checkAccess() {
+            const code = prompt("Enter security code to view this page:");
+            if (code !== "1234a1234") {  // <-- Change "mycode2025" to your own secret code
+              alert("Incorrect code. Access denied.");
+              window.location.href = "index.html"; // Redirect if wrong
+            } else {
+              document.getElementById("secure-content").style.display = "block";
+            }
+          }
+        </script>
     </head>
-    <body>
+    <body onload="checkAccess()">
         
         <div class="page-wrapper">
           <header class="site-header">
@@ -25,56 +38,72 @@
            </ul>
           </nav>
 
-        <main class="content-wrapper about">
-              <p>
-                <p>
-                <div class = "achievements-box">
-                  <h3 class = "achievements-heading-1">
-                    Achievements
-                  </h3>
-                  <p class = "achievements-paragraph-1">
-                   Certificate of Responsive Web Design from Freecodecamp
-                  </p>
-                   <img src="webdesign.png" alt="a certificate" style="display:block; margin:auto; width: 300px;">
-                  <p class = "achievements-paragraph-1">
-                    While I was in Loikaw, unable to just visit around the city, I thought I must stop wasting my time and value the still working Wifi. I think of multiple ways to use my time effectively. But being able to create websites was simply just amazing for me but I asked to myself again, where would I find a class that is begin friendly, flexible time schedule and would also give certificate? This is my answer to those questions.
-                  </p>
-                  <br>
-                  <p class="achievements-paragraph-2">
-                    IELTS Band 8
-                  </p>
-                  <img src="IELTS.png" alt="IELTS certificate" style="display:block; margin:auto; width: 300px;">
-                </div>
-                  
-              </p>
-              </p>
+        <main class="content-wrapper about" id="secure-content" style="display:none;">
+              <div class="achievements-box">
+                <h3 class="achievements-heading-1">Achievements</h3>                
+                <p class="achievements-paragraph-1">
+                  Certificate of Responsive Web Design from freeCodeCamp
+                </p>
+                <img src="webdesign.png" alt="a certificate" style="display:block; margin:auto; width: 300px;">
+                
+                <p class="achievements-paragraph-1">
+                  It was really fun taking this course. Even though HTML and CSS are not “real” programming languages, they still sparked my interest in programming. After completing the course, I built a website for my sister, and the main issue I encountered was hosting. For this website, I used AI only when necessary and took advantage of GitHub’s free hosting service.
+                </p>
+              </div>
+              <div class="achievements-box">
+                <p class="achievements-paragraph-2">
+                  IELTS Band 8
+                </p>
+                <img src="IELTS.png" alt="IELTS certificate" style="display:block; margin:auto; width: 300px;">
+                <p class="achievements-paragraph-1">
+                  I learned about the IELTS when I started seriously researching scholarships. I wasn’t very good at English in high school, but surprisingly, YouTube helped me improve a lot. Most of the credit, however, goes to IELTS practice websites — they were incredibly helpful. I prefer taking tests over studying aimlessly, so I completed nearly all the practice tests available, and my band scores improved steadily. Since I couldn’t properly test my writing and speaking, those two ended up being my lowest scores. I believe that with more effort, I could achieve an even higher overall band score.
+                </p>
+              </div>
+              <div class="achievements-box">
+                <p class="achievements-paragraph-2">
+                  Scientific computing with Python
+                </p>
+                <img src="Scientific computing with python.png" alt="FreeCodeCamp certificate" style="display:block; margin:auto; width: 300px;">
+                <p class="achievements-paragraph-1">
+                  This course really made me fall in love with Python. I completed multiple projects to earn the certificate, and my favorite was the Time Adder project. I didn’t use any built-in Python features or AI; instead, I developed my own 12-hour system. I couldn’t stop smiling while coding this project — it was pure happiness.
+                </p>
+              </div>
+              <div class="achievements-box">
+                <p class="achievements-paragraph-2">
+                  College Algebra with Python
+                </p>
+                <img src="College Algebra with python.png" alt="FreeCodeCamp certificate" style="display:block; margin:auto; width: 300px;">
+                <p class="achievements-paragraph-1">
+                Unlike the previous course, this one showed me how vast Python really is and highlighted its major strength in handling data. It also humbled me by revealing how limited my knowledge in Math is and reminded me to continue studying it.
+                </p>
+              </div>
         </main>
 
         <footer class="site-footer">
             <p>© 2025 Htet Myet Nyein. All rights reserved.</p>
-            <p>Contact: <a href="mailto:htet@example.com">hmngojo@gmail.com</a></p>
+            <p>Contact: <a href="mailto:hmngojo@gmail.com">hmngojo@gmail.com</a></p>
         </footer>
       </div>
         
         <script>
            function toggleSidebar() {
-           const sidebar = document.getElementById("sidebar");
-           sidebar.classList.toggle("active");
-          }
-
-        // Optional: close sidebar on outside click
-        window.addEventListener('click', function(e) {
-           const sidebar = document.getElementById('sidebar');
-           const hamburger = document.querySelector('.hamburger');
-    
-           if (
-             sidebar.classList.contains('active') &&
-             !sidebar.contains(e.target) &&
-             !hamburger.contains(e.target)
-           ) {
-             sidebar.classList.remove('active');
+             const sidebar = document.getElementById("sidebar");
+             sidebar.classList.toggle("active");
            }
-         });
+
+           // Optional: close sidebar on outside click
+           window.addEventListener('click', function(e) {
+             const sidebar = document.getElementById('sidebar');
+             const hamburger = document.querySelector('.hamburger');
+    
+             if (
+               sidebar.classList.contains('active') &&
+               !sidebar.contains(e.target) &&
+               !hamburger.contains(e.target)
+             ) {
+               sidebar.classList.remove('active');
+             }
+           });
         </script>
     </body>
 </html>
